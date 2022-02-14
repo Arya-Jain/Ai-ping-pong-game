@@ -25,11 +25,24 @@ function setup(){
   var canvas =  createCanvas(600,500);
   canvas.center();
   canvas.parent('canvas');
+
+  video = createCapture(VIDEO);
+  video.hide();
+
+  poseNet = ml5.poseNet(video, modelLoaded);
+ // poseNet.on('pose', gotResults);
 }
 
+function modelLoaded(){
+  console.log("model Is Loaded");
+}
+
+//function gotResults(){
+
+//}
 
 function draw(){
-
+image(video, 0, 0, 600, 500);
  background(0); 
 
  fill("black");
