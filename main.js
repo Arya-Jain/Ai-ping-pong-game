@@ -26,6 +26,9 @@ var ball = {
     dx:3,
     dy:3
 }
+
+game_status = "";
+
 function preload(){
   ball_touch = loadSound("ball_touch_paddel.wav");
   missed = loadSound("missed.wav");
@@ -68,13 +71,11 @@ function startGame()
   game_status = "start";
   document.getElementById("status").innerHTML = "Game is loaded";
 }
+
 function draw(){
 
   if (game_status == "start") {
-    
-  }
- 
- background(0); 
+    background(0); 
  image (video, 0, 0, 700, 600);
  
  fill("black");
@@ -118,6 +119,10 @@ function draw(){
    //function move call which in very important
     move();
 }
+    
+  }
+ 
+ 
 
 
 
