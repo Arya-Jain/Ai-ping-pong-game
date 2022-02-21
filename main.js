@@ -191,7 +191,7 @@ if(pcscore ==4){
     stroke("white");
     textSize(25)
     text("Game Over!☹☹",width/2,height/2);
-    text("Reload Restart Button To Play Again!",width/2,height/2+30)
+    text("Press Restart Button To Play Again!",width/2,height/2+30)
     noLoop();
     pcscore = 0;
 }
